@@ -1,0 +1,10 @@
+{
+  "balance_weight": 0.25,
+  "fragmentation_weight": 0.35,
+  "spread_weight": 0.2,
+  "residual_fit_weight": 0.2,
+  "enable_future_fit": false,
+  "future_fit_weight": 0.2,
+  "tie_breaking": "node_id",
+  "diagnostics_enabled": true
+}

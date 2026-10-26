@@ -1,0 +1,53 @@
+{
+  "cluster_name": "GPUlytics hypothetical demo cluster",
+  "role_compatibility": {
+    "CN": ["CN"],
+    "HN": ["HN"]
+  },
+  "density_unlimited_values": [],
+  "density_limit_semantics_verified": false,
+  "extra_resource_units": {},
+  "assumptions": [
+    "All nodes and capacities are hypothetical demonstration values, not Alibaba hardware inventory.",
+    "Role compatibility is an explicit simulation assumption based on matching configured role labels; it is not a verified Alibaba placement rule.",
+    "Timestamp-derived simulation times remain in unverified source units and are not seconds.",
+    "Application density caps are not enforced unless density_limit_semantics_verified is explicitly set true; the trace field semantics have not been verified.",
+    "Negative max_instance_per_node values are rejected by the input adapter unless a specific integer is explicitly configured as a sentinel; they are never silently treated as unlimited.",
+    "Resource requests are allocation requirements, not measured consumption or utilization."
+  ],
+  "nodes": [
+    {
+      "node_id": "cpu-node-01",
+      "role": "CN",
+      "capacity": {
+        "cpu_units": 64,
+        "gpu_devices": 0,
+        "memory_units": 256,
+        "rdma_units": 100,
+        "disk_units": 1000
+      }
+    },
+    {
+      "node_id": "gpu-node-01",
+      "role": "HN",
+      "capacity": {
+        "cpu_units": 64,
+        "gpu_devices": 4,
+        "memory_units": 256,
+        "rdma_units": 100,
+        "disk_units": 1000
+      }
+    },
+    {
+      "node_id": "gpu-node-02",
+      "role": "HN",
+      "capacity": {
+        "cpu_units": 128,
+        "gpu_devices": 8,
+        "memory_units": 512,
+        "rdma_units": 200,
+        "disk_units": 2000
+      }
+    }
+  ]
+}
